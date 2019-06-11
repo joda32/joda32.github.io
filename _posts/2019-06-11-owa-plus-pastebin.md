@@ -12,11 +12,11 @@ But I'm not going down that rabbit hole. What I was curious about was how quickl
 ## ./configure
 To start I would need an OWA instance, which 1. I didn't have and 2. being lazy I wasn't going to setup. Just way to much effort, so after googling for a bit and not finding a OWA based honeypot that I liked so I quickly slapped one together using python flask and some pretty hacky code, [https://github.com/joda32/owa-honeypot](https://github.com/joda32/owa-honeypot). 
 
-![OWALandingPage](https://github.com/joda32/owa-honeypot/blob/master/docs/OWA_honeypot_1.png)
+![OWALandingPage](https://raw.githubusercontent.com/joda32/owa-honeypot/master/docs/OWA_honeypot_1.png)
 
 I added some touches like the favicon, fonts and tweaking the HTTP Response headers to at least look like a Windows/OWA box. I also added some routes that you would normally find with OWA (EWS etc) and put some basic auth on them. Lastly, I decided to copy include some IIS/.Net 404, 403 and 401 pages again just to make it less obvious that this is a honeypot.
 
-![OWA404](https://github.com/joda32/owa-honeypot/blob/master/docs/OWA_honeypot_4.png)
+![OWA404](https://raw.githubusercontent.com/joda32/owa-honeypot/master/docs/OWA_honeypot_4.png)
 
 I registered a super cheap domain from NameCheap and got the honeypot running on a $5 DigitalOcean VPS.
 
@@ -28,8 +28,8 @@ To create the post I simply searched for a paste with the word "Hacked" in it, c
 ## 60 seconds
 To be honest I didn't expect much, I would have settled for someone browsing to the honeypot. 60 seconds was all that it took for the first login attempt using "creds" from the fake breach. Over the next 45 min another 5 different IPs tried various "creds" all from the fake breach. Also, based on the HTTP logs, this looked like actual browsers, not just based on the User-Agent, but also the way and the sequence that resources were requests from the honeypot
 
-![HTTPLog1](https://github.com/joda32/owa-honeypot/blob/master/docs/OWA_honeypot_2.png)
+![HTTPLog1](https://raw.githubusercontent.com/joda32/owa-honeypot/master/docs/OWA_honeypot_2.png)
 
 Also not one "attacker" used the full list. The most one attacker tried was 5 sets of creds, randomly picked from the breach. 
 
-![HTTPLog2](https://github.com/joda32/owa-honeypot/blob/master/docs/OWA_honeypot_3.png)
+![HTTPLog2](https://raw.githubusercontent.com/joda32/owa-honeypot/master/docs/OWA_honeypot_3.png)

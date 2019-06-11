@@ -1,7 +1,7 @@
 ---
 layout: post
-title: OWA Honeypot + pastebin.com = 60 seconds
-author: @_w_m__
+title: "OWA Honeypot + pastebin.com = 60 seconds"
+author: "@_w_m__"
 ---
 
 If you've ever done an external pentest or redteam exercise then you will know that OWA (Outlook Web App) is your friend. Everything from bruteforcing, dropping mail rules ala [ruler](https://github.com/sensepost/ruler) or just scanning mailboxes for useful info such as passwords etc.

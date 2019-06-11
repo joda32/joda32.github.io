@@ -1,6 +1,9 @@
-# OWA Honeypot + pastebin.com = 60 seconds
+---
+layout: post
+title: OWA Honeypot + pastebin.com = 60 seconds
+author: @_w_m__
+---
 
-## ./init
 If you've ever done an external pentest or redteam exercise then you will know that OWA (Outlook Web App) is your friend. Everything from bruteforcing, dropping mail rules ala [ruler](https://github.com/sensepost/ruler) or just scanning mailboxes for useful info such as passwords etc.
 
 Chances are that you got in using some form of a password attack, bruteforce, spraying or what ever floated you boat on the day. And you most likely noted in your report that a weak password policy, user password reuse and lack of MFA (Multi Factor Authentication) is to blame. And that is really sound advice, but more often than not companies for one reason or another tend to ignore these recomendations. Maybe strong passwords/phrases are to hard to remember, maybe MFA gets in the way of users. 

@@ -28,7 +28,7 @@ Now if I just left it like that, chances are that the only traffic I would see i
 
 To create the post I simply searched for a paste with the word "Hacked" in it, copied it, cleaned up the data a bit and replaced the domains of the email addresses in the orignal post with the domain that I purchased. Also I changed the link of the "supposed" breached site. And then I just posted it back onto pastebin.
 
-## 60 seconds
+## Gone in 60 seconds
 To be honest I didn't expect much, I would have settled for someone browsing to the honeypot. 60 seconds was all that it took for the first login attempt using "creds" from the fake breach. Over the next 45 min another 5 different IPs tried various "creds" all from the fake breach. Also, based on the HTTP logs, this looked like actual browsers, not just based on the User-Agent, but also the way and the sequence that resources were requests from the honeypot
 
 ![HTTPLog1](https://raw.githubusercontent.com/joda32/owa-honeypot/master/docs/OWA_honeypot_2.png)
@@ -36,3 +36,9 @@ To be honest I didn't expect much, I would have settled for someone browsing to 
 Also not one "attacker" used the full list. The most one attacker tried was 5 sets of creds, randomly picked from the breach. 
 
 ![HTTPLog2](https://raw.githubusercontent.com/joda32/owa-honeypot/master/docs/OWA_honeypot_3.png)
+
+What was also mildly interesting was that the IP addresses used was not in any threat list, tor exit nodes or other VPN ranges. It actually seemed to be mostly GSM/Mobile network ranges from various countries :)
+
+I think the moral of the story here is that while this experiment was not scientific in any way shape or form it does show a certain level of interest and intent in gaining access to "compromised" systems. If it was a real organisation at the other end of the domain and not a honeypot having things like MFA etc would definitly be worth having (actually you don't have an excuse not to have it) but if for some reason you don't having things like canary or honeytoken accounts atleast will give you a heads up that your data has leaked in some shape or form.
+
+Well that was worth the 2hours :)
